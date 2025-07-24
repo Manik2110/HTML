@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Added background image and properties */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/dot-grid.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f2f5; /* Fallback color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    /* Updated background for a "frosted glass" effect */
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* For Safari support */
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+
+p {
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+}
+
+.toggle-link {
+    color: #007bff;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle-link:hover {
+    text-decoration: underline;
+}
+
+/* Hide Radio Buttons */
+input[name="form-toggle"] {
+    display: none;
+}
+
+/* Logic to Show/Hide Forms */
+#register-form {
+    display: none;
+}
+
+#login-toggle:checked ~ #login-form {
+    display: block;
+}
+
+#login-toggle:checked ~ #register-form {
+    display: none;
+}
+
+#register-toggle:checked ~ #register-form {
+    display: block;
+}
+
+#register-toggle:checked ~ #login-form {
+    display: none;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hidden Radio Buttons to Control Form Visibility -->
+        <input type="radio" name="form-toggle" id="login-toggle" checked>
+        <input type="radio" name="form-toggle" id="register-toggle">
+
+        <div class="form-container" id="login-form">
+            <h1>Login</h1>
+            <form>
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>Don't have an account? <label for="register-toggle" class="toggle-link">Register here</label></p>
+        </div>
+
+        <div class="form-container" id="register-form">
+            <h1>Register</h1>
+            <form>
+                <div class="input-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <label for="login-toggle" class="toggle-link">Login here</label></p>
+        </div>
+    </div>
+</body>
+</html>
